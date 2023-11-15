@@ -1,0 +1,259 @@
+version: "3.1"
+
+nlu:
+  # Намерение: вызов бота
+  - intent: bot_challenge
+    examples: |
+      - вы бот?
+      - бот?
+      - ты человек?
+      - вы человек?
+      - человек?
+      - я разговариваю с ботом?
+      - я разговариваю с человеком?
+
+  # Намерение: приветствие
+  - intent: greet
+    examples: |
+      - привет
+      - здравствуте
+      - доброе утро
+      - добрый день
+      - добрый вечер
+      - доброй ночи
+
+  # Намерение: прощание
+  - intent: goodbye
+    examples: |
+      - пока
+      - до свидания
+      - увидимся
+      - увидимся позже
+
+  # Намерение: запрос к базе знание 
+  - intent: query_knowledge_base
+    examples: |
+      - [гостиницы]{"entity": "object_type", "value": "hotel"}
+      - какие [гостиницы]{"entity": "object_type", "value": "hotel"} вы можете порекомендовать?
+      - перечислите мне несколько [отелей]{"entity": "object_type", "value": "hotel"} в [Москве]{"entity": "city", "value": "Москва"}
+      - какие [гостиницы]{"entity": "object_type", "value": "hotel"} вы знаете в [Санкт-Петербурге]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} [Санкт-Петербурга]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} в [Санкт-Петербурге]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} в [Санкт-Петербурге]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} [Питера]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} в [Питере]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} [Питербурга]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} в [Питербурге]{"entity": "city", "value": "Санкт-Петербург"}?
+      - [отели]{"entity": "object_type", "value": "hotel"} [Москвы]{"entity": "city", "value": "Москва"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} [Москвы]{"entity": "city", "value": "Москва"}?
+      - [отели]{"entity": "object_type", "value": "hotel"} в [Москве]{"entity": "city", "value": "Москва"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} в [Москве]{"entity": "city", "value": "Москва"}?
+      - назовите несколько [отелей]{"entity": "object_type", "value": "hotel"}
+      - назовите несколько [отелей]{"entity": "object_type", "value": "hotel"} в [Москве]{"entity": "city", "value": "Москва"}
+      - покажи мне несколько [отелей]{"entity": "object_type", "value": "hotel"}
+      - покажи мне несколько [отелей]{"entity": "object_type", "value": "hotel"} в [Москве]{"entity": "city", "value": "Москва"}
+      - какие [отели]{"entity": "object_type", "value": "hotel"} в [Санкт-Петербурге]{"entity": "city", "value": "Санкт-Петербург"}
+      - включен ли [там]{"entity": "mention"} [завтрак]{"entity": "attribute", "value": "breakfast-included"} в стоимость?
+      - включен ли [там]{"entity": "mention"} [завтрак]{"entity": "attribute", "value": "breakfast-included"} в цену?
+      - [там]{"entity": "mention"} [завтрак]{"entity": "attribute", "value": "breakfast-included"} в цене?
+      - у [него]{"entity": "mention"} [завтрак]{"entity": "attribute", "value": "breakfast-included"} в цене?
+      - сколько [звезд]{"entity": "attribute", "value": "rating"} у [первой]{"entity": "mention", "value": "1"}?
+      - сколько [звезд]{"entity": "attribute", "value": "rating"} у [второй]{"entity": "mention", "value": "2"}?
+      - сколько [звезд]{"entity": "attribute", "value": "rating"} у [третьей]{"entity": "mention", "value": "3"}?
+      - сколько [звезд]{"entity": "attribute", "value": "rating"} у [четвертой]{"entity": "mention", "value": "4"}?
+      - сколько [звезд]{"entity": "attribute", "value": "rating"} у [пятой]{"entity": "mention", "value": "5"}?
+      - сколько [звезд]{"entity": "attribute", "value": "rating"} у [последней]{"entity": "mention", "value": "LAST"}?
+      - сколько [звезд]{"entity": "attribute", "value": "rating"} [там]{"entity": "mention"}?
+      - сколько [там]{"entity": "mention"} [звезд]{"entity": "attribute", "value": "rating"}?
+      - сколько у [него]{"entity": "mention"} [звезд]{"entity": "attribute", "value": "rating"}?
+      - какой [рейтинг]{"entity": "attribute", "value": "rating"} у [первой]{"entity": "mention", "value": "1"}?
+      - какой [рейтинг]{"entity": "attribute", "value": "rating"} у [второй]{"entity": "mention", "value": "2"}?
+      - какой [рейтинг]{"entity": "attribute", "value": "rating"} у [третьей]{"entity": "mention", "value": "3"}?
+      - какой [рейтинг]{"entity": "attribute", "value": "rating"} у [четвертой]{"entity": "mention", "value": "4"}?
+      - какой [рейтинг]{"entity": "attribute", "value": "rating"} у [пятой]{"entity": "mention", "value": "5"}?
+      - какой [рейтинг]{"entity": "attribute", "value": "rating"} у [последней]{"entity": "mention", "value": "LAST"}?
+      - какой [рейтинг]{"entity": "attribute", "value": "rating"} [там]{"entity": "mention"}?
+      - какой [там]{"entity": "mention"} [рейтинг]{"entity": "attribute", "value": "rating"}?
+      - какой у [него]{"entity": "mention"} [рейтинг]{"entity": "attribute", "value": "rating"}
+      - какой [адрес]{"entity": "attribute", "value": "address"} у [первой]{"entity": "mention", "value": "1"}?
+      - какой [адрес]{"entity": "attribute", "value": "address"} у [второй]{"entity": "mention", "value": "2"}?
+      - какой [адрес]{"entity": "attribute", "value": "address"} у [третьей]{"entity": "mention", "value": "3"}?
+      - какой [адрес]{"entity": "attribute", "value": "address"} у [четвертой]{"entity": "mention", "value": "4"}?
+      - какой [адрес]{"entity": "attribute", "value": "address"} у [пятой]{"entity": "mention", "value": "5"}?
+      - какой [адрес]{"entity": "attribute", "value": "address"} у [последней]{"entity": "mention", "value": "LAST"}?
+      - какой [адрес]{"entity": "attribute", "value": "address"} [там]{"entity": "mention"}?
+      - какой [там]{"entity": "mention"} [адрес]{"entity": "attribute", "value": "address"}?
+      - какой у [него]{"entity": "mention"} [адрес]{"entity": "attribute", "value": "address"}?
+      - какой [телефон]{"entity": "attribute", "value": "telephone"} у [первой]{"entity": "mention", "value": "1"}?
+      - какой [телефон]{"entity": "attribute", "value": "telephone"} у [второй]{"entity": "mention", "value": "2"}?
+      - какой [телефон]{"entity": "attribute", "value": "telephone"} у [третьей]{"entity": "mention", "value": "3"}?
+      - какой [телефон]{"entity": "attribute", "value": "telephone"} у [четвертой]{"entity": "mention", "value": "4"}?
+      - какой [телефон]{"entity": "attribute", "value": "telephone"} у [пятой]{"entity": "mention", "value": "5"}?
+      - какой [телефон]{"entity": "attribute", "value": "telephone"} у [последней]{"entity": "mention", "value": "LAST"}?
+      - какой [телефон]{"entity": "attribute", "value": "telephone"} [там]{"entity": "mention"}?
+      - какой [там]{"entity": "mention"} [телефон]{"entity": "attribute", "value": "telephone"}?
+      - какой у [него]{"entity": "mention"} [телефон]{"entity": "attribute", "value": "telephone"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} ближайшая к [первой]{"entity": "mention", "value": "1"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} ближайшая ко [второй]{"entity": "mention", "value": "2"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} ближайшая к [второй]{"entity": "mention", "value": "2"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} ближайшая к [третьей]{"entity": "mention", "value": "3"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} ближайшая к [четвертой]{"entity": "mention", "value": "4"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} ближайшая к [пятой]{"entity": "mention", "value": "5"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} ближайшая к [последней]{"entity": "mention", "value": "LAST"}?
+      - [станция метро]{"entity": "attribute", "value": "metro"} [рядом]{"entity": "mention"}?
+      - ближайшая к [ней]{"entity": "mention"} [станция метро]{"entity": "attribute", "value": "metro"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} рядом с метро [Адмиралтейская]{"entity": "metro", "value": "Адмиралтейская"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} рядом с метро [Арбатская]{"entity": "metro", "value": "Арбатская"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} недалеко от метро [Динамо]{"entity": "metro", "value": "Динамо"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} недалеко от метро [Чёрная Речка]{"entity": "metro", "value": "Чёрная Речка"}?
+      - ближайшие к метро [Спортивная]{"entity": "metro", "value": "Спортивная"} [гостиницы]{"entity": "object_type", "value": "hotel"}?
+      - ближайшие к метро [Маяковская]{"entity": "metro", "value": "Маяковская"} [гостиницы]{"entity": "object_type", "value": "hotel"}?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} с рейтингом [пять]{"entity": "rating", "value": "5"} звезд?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} с рейтингом [четыре]{"entity": "rating", "value": "4"} звезды?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} [пять]{"entity": "rating", "value": "5"} звезд?
+      - [гостиницы]{"entity": "object_type", "value": "hotel"} [три]{"entity": "rating", "value": "3"} звезды?
+      - [пятизвездочные]{"entity": "rating", "value": "5"} [отели]{"entity": "object_type", "value": "hotel"}?
+      - [четырехзвездочные]{"entity": "rating", "value": "4"} [отели]{"entity": "object_type", "value": "hotel"}?
+      - [трехзвездочные]{"entity": "rating", "value": "3"} [отели]{"entity": "object_type", "value": "hotel"}?
+
+  - synonym: Москва
+    examples: |
+      - Москве
+      - Москвы
+      - москва
+      - москве
+      - москвы
+
+  - synonym: Санкт-Петербург
+    examples: |
+      - Санкт-Петербурге
+      - Санкт-Петербурга
+      - Санкт-Петербургу
+      - санкт-петербург
+      - санкт-петербурге
+      - санкт-петербурга
+      - санкт-петербургу
+      - санкт-Петербург
+      - санкт-Петербурге
+      - санкт-Петербурга
+      - санкт-Петербургу
+      - Санкт-Петербург
+      - Санкт-Петербурге
+      - Санкт-Петербурга
+      - Санкт-Петербургу
+      - Питербург
+      - Питербурге
+      - Питербурга
+      - Питербургу
+      - Питер
+      - Питере
+      - Питера
+      - Питеру
+      - питербург
+      - питербурге
+      - питербурга
+      - питербургу
+      - питер
+      - питере
+      - питера
+      - питеру
+
+  - synonym: hotel
+    examples: |
+      - Отель
+      - отель
+      - отели
+      - Отели
+      - отелях
+      - Отелях
+      - отелей
+      - Отелей
+      - гостиниц
+      - Гостиниц
+      - гостиница
+      - Гостиница
+      - гостиницы
+      - Гостиницы
+      - гостиницах
+      - Гостиницах
+      - гостинице
+      - Гостинице
+
+  - synonym: "1"
+    examples: |
+      - первой
+      - первом
+      - первого
+      - одна
+
+  - synonym: "2"
+    examples: |
+      - второй
+      - втором
+      - второго
+      - две
+
+  - synonym: "3"
+    examples: |
+      - третьей
+      - третьем
+      - третьего
+      - три
+
+  - synonym: "4"
+    examples: |
+      - четвертой
+      - четвертом
+      - четвертого
+      - четыре
+
+  - synonym: "5"
+    examples: |
+      - пятой
+      - пятом
+      - пятого
+      - пять
+
+  - synonym: последнем  
+    examples: |
+      - последнего
+      - последней
+
+  - synonym: звезд
+    examples: |
+      - звёзд
+
+  - synonym: rating
+    examples: |
+      - звёздный рейтинг
+      - звездный рейтинг
+      - рейтинг
+
+  - synonym: него
+    examples: |
+      - нее
+      - неё
+      - ней
+      - нему  
+      
+  - synonym: метро
+    examples: |
+      - станция метро
+      - станцией метро
+      - у метро
+      - от метро
+      - к метро
+      
+  - synonym: рядом
+    examples: |
+      - недалеко
+      - неподалеку
+      - неподалёку
+      
+  - synonym: Маяковская
+    examples: |
+      - маяковская
+      - Маяковского
+      - маяковского
+
+    

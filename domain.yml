@@ -1,0 +1,92 @@
+version: "3.1"
+
+intents:                          # Список намерений
+- greet                           # Приветствие 
+- goodbye                         # Прощание
+- query_knowledge_base            # Запрос к базе знаний
+- bot_challenge                   # Вызов бота
+
+entities:                         # Список сущностей 
+- object_type                     # сущность: Тип объекта
+- mention                         # сущность: Ссылка на ранее упомянутый объект, например, через местоимение или перечисление
+- attribute                       # сущность: атрибут
+- hotel                           # сущность: гостиница, отель
+- city                            # сущность: город
+- rating                          # сущность: рейтинг  
+- metro                           # сущность: ближайшая станция метро 
+
+slots:                            # Список слотов
+  object_type:                    # Наименование слота: "object_type"
+    type: text                    # Тип слота: "text"
+    influence_conversation: false # Отключаем влияние слота на разговор
+    mappings:                     # Сопоставление слотов   
+    - type: from_entity           # Сопоставление слотов from_entity заполняет слоты на основе извлеченных сущностей
+      entity: object_type         # Сущность "object_type" будет заполнять слот "object_type"
+      
+  mention:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mention
+      
+  attribute:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: attribute
+      
+  hotel:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: hotel
+      
+  city:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: city
+
+  rating:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: rating
+
+  metro:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: metro
+      
+actions:                          # Список действий
+- action_query_knowledge_base
+
+responses:                        # Список ответов
+  utter_greet:
+  - text: Привет. Я могу рассказать о гостиницах Москвы и Санкт-Петербурга
+  - text: Здравствуйте. Расскажу Вам о гостиницах Москвы и Санкт-Петербурга
+  
+  utter_goodbye:
+  - text: Пока
+  - text: До свидания
+  - text: Желаю удачи!
+  
+  utter_ask_rephrase:
+  - text: Извините, я не уверен, что понимаю. Можете перефразировать?
+  - text: Можете, пожалуйста, перефразировать? Я этого не понял.
+  
+  utter_iamabot:
+  - text: Я бот, реализованный на базе фрейворка Rasa
+  - text: Я бот
+  - text: Я бот для выбора гостиницы
+  
+session_config:                   # Параметры сессии
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

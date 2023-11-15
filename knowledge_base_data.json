@@ -1,0 +1,164 @@
+{
+    "hotel": [
+        {
+            "id": 0,
+            "name": "Марриотт Гранд",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "5",
+			"metro": "Маяковская",
+			"address": "ул. Тверская, 26/1",
+			"telephone": "+7(495)937-00-00"
+        },
+        {
+            "id": 1,
+            "name": "Санкт-Петербург",
+            "breakfast-included": "да",
+            "city": "Санкт-Петербург",
+            "rating": "4",
+			"metro": "Площадь Ленина",
+			"address": "ул. Пироговская наб., д. 5/2",
+			"telephone": "+7(812)380-19-19"
+        },
+        {
+            "id": 2,
+            "name": "Националь",
+            "breakfast-included": "нет",
+            "city": "Москва",
+            "rating": "5",
+			"metro": "Охотный ряд",
+			"address": "ул. Моховая, д. 15/1, стр. 1",
+			"telephone": "+7(495)258-70-00"
+        },
+        {
+            "id": 3,
+            "name": "У Эрмитажа",
+            "breakfast-included": "нет",
+            "city": "Санкт-Петербург",
+            "rating": "3",
+			"metro": "Адмиралтейская",
+			"address": "набережная реки Мойки, 42",
+			"telephone": "+7(981)890-83-95"
+        },
+        {
+            "id": 4,
+            "name": "Valo Business",
+            "breakfast-included": "да",
+            "city": "Санкт-Петербург",
+            "rating": "4",
+			"metro": "Бухарестская",
+			"address": "ул. Салова, 61",
+			"telephone": "+7(812)692-00-00"
+        },
+        {
+            "id": 5,
+            "name": "На Цветном",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "3",
+			"metro": "Цветной бульвар",
+			"address": "Цветной бульвар, 25, стр. 7",
+			"telephone": "+7(993)594-39-72"
+        },
+        {
+            "id": 6,
+            "name": "Хилтон Москва",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "5",
+			"metro": "МЦД-2",
+			"address": "ул. Каланчевская 21/40",
+			"telephone": "+7(495)627-55-50"
+        },
+        {
+            "id": 7,
+            "name": "Helvetia",
+            "breakfast-included": "да",
+            "city": "Санкт-Петербург",
+            "rating": "5",
+			"metro": "Маяковская",
+			"address": "ул. Марата, 11",
+			"telephone": "+7(812)326-53-53"
+        },
+        {
+            "id": 8,
+            "name": "KRAVT Nevsky",
+            "breakfast-included": "да",
+            "city": "Санкт-Петербург",
+            "rating": "4",
+			"metro": "Площадь Александра Невского-2",
+			"address": "ул. Александра Невского, д.8А",
+			"telephone": "+7(812)777-45-55"
+        },
+        {
+            "id": 9,
+            "name": "Best Western Zoom",
+            "breakfast-included": "нет",
+            "city": "Санкт-Петербург",
+            "rating": "3",
+			"metro": "Чёрная Речка",
+			"address": "ул. Матроса Железняка, д.2, стр.1",
+			"telephone": "+7(812)665-73-47"
+        },
+        {
+            "id": 10,
+            "name": "Кронверк",
+            "breakfast-included": "да",
+            "city": "Санкт-Петербург",
+            "rating": "3",
+			"metro": "Спортивная",
+			"address": "ул. Блохина, д. 9А",
+			"telephone": "+7(812)703-36-63"
+        },
+        {
+            "id": 11,
+            "name": "Силуэт",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "3",
+			"metro": "Трубная",
+			"address": "пер. 1-й Колобовский, 11",
+			"telephone": "+7(495)694-22-62"
+        },
+        {
+            "id": 12,
+            "name": "Pentahotel Moscow Arbat",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "4",
+			"metro": "Арбатская",
+			"address": "ул. Новый Арбат, 15",
+			"telephone": "+7(495)787-44-33"
+        },
+        {
+            "id": 13,
+            "name": "Петровский Путевой Дворец",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "5",
+			"metro": "Динамо",
+			"address": "Ленинградский проспект, 40",
+			"telephone": "+7(495)401-78-89"
+        },
+        {
+            "id": 14,
+            "name": "Времена года",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "4",
+			"metro": "Арбатская",
+			"address": "пер. Большой Кисловский д. 1, стр. 2",
+			"telephone": "+7(495)104-38-51"
+        },
+        {
+            "id": 15,
+            "name": "Арт Москва",
+            "breakfast-included": "да",
+            "city": "Москва",
+            "rating": "4",
+			"metro": "Войковская",
+			"address": "ул. Космонавта Волкова, 6А",
+			"telephone": "+7(495)357-77-57"
+        }
+    ]
+}
